@@ -1,34 +1,38 @@
-import math
-
-print("Calculate the area of the following shapes:")
+# Print shape options
+print("Calculate the area of following shapes:")
 print("1. Circle")
 print("2. Rectangle")
 print("3. Square")
 print("4. Triangle")
 
-shape = input("Enter the number corresponding to the shape: ")
+# User input for shape choice (not used for branching)
+print("Find the area of Circle: \n")
 
-if shape == "1":
-    radius = float(input("Enter the radius of the circle: "))
-    area = math.pi * radius ** 2
-    print(f"The area of the circle is: {area:.2f}")
+# Circle area calculation
+radius = float(input("Enter the radius of the circle: "))
+PI = 3.14159
+circle_area = PI * radius * radius  
+print("Find the area of Rectangle: \n")
 
-elif shape == "2":
-    length = float(input("Enter the length of the rectangle: "))
-    width = float(input("Enter the width of the rectangle: "))
-    area = length * width
-    print(f"The area of the rectangle is: {area:.2f}")
+# Rectangle area calculation
+length = float(input("Enter the length of the rectangle: "))
+width = float(input("Enter the width of the rectangle: "))
+rectangle_area = length * width
+print("Find the area of Square: \n")
 
-elif shape == "3":
-    side = float(input("Enter the side length of the square: "))
-    area = side ** 2
-    print(f"The area of the square is: {area:.2f}")
+# Square area calculation
+side = float(input("Enter the side length of the square: "))
+square_area = side * side
+print("Find the area of Triangle: \n")
 
-elif shape == "4":
-    base = float(input("Enter the base of the triangle: "))
-    height = float(input("Enter the height of the triangle: "))
-    area = 0.5 * base * height
-    print(f"The area of the triangle is: {area:.2f}")
+# Triangle area calculation
+base = float(input("Enter the base of the triangle: "))
+height = float(input("Enter the height of the triangle: "))
+triangle_area = 0.5 * base * height
 
-else:
-    print("Invalid choice! Please enter a valid number (1-4).")
+# Print all areas
+print("All the areas are: \n")
+print("The area of the circle is:", circle_area, "\n")
+print("The area of the rectangle is:", rectangle_area, "\n")
+print("The area of the square is:", square_area, "\n")
+print("The area of the triangle is:", triangle_area, "\n")
